@@ -1,0 +1,56 @@
+<?xml version="1.0"
+        encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM
+        "https://testng.org/testng-1.0.dtd">
+
+<suite name="My Suite">
+
+    <!-- Listener -->
+    <listeners>
+        <listener class-name=
+                          "org.example.MyListener"/>
+    </listeners>
+
+    <!-- Test Group 1 — POM Tests -->
+    <test name="Login Tests">
+        <classes>
+            <class name=
+                           "org.example.Tests.LoginTest"/>
+        </classes>
+    </test>
+
+    <!-- Test Group 2 — Basic Tests -->
+    <test name="Basic Tests">
+        <classes>
+            <class name=
+                           "org.example.TestNGDemo"/>
+            <class name=
+                           "org.example.DataProviderDemo"/>
+            <class name=
+                           "org.example.SoftAssert1"/>
+        </classes>
+    </test>
+
+    <!-- Test Group 3 — Other Tests -->
+    <test name="Other Tests">
+        <classes>
+            <class name=
+                           "org.example.ListenerDemo"/>
+            <class name=
+                           "org.example.DependsDemo"/>
+        </classes>
+    </test>
+
+</suite>
+
+
+<!--<suite>      → Sab tests ka group
+<test>       → Ek test group
+    <classes>    → Kaunsi classes
+        <class>      → Ek class
+            <methods>    → Kaunse methods
+                <include>    → Yeh chalao                Groups = Upar se neeche  order mein chalte! ✅
+                    <exclude>    → Yeh mat chalao
+                        <groups>     → Groups filter
+                            <parameter>  → Data pass karo
+                                <listeners>  → Listener add karo-->
